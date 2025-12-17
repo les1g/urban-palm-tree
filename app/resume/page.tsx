@@ -160,10 +160,10 @@ export default function ResumePage() {
           flexWrap: 'wrap'
         }}>
           <Link href="/contact" className="btn btn-primary">
-            Contact Me
+            Contact
           </Link>
           <Link href="/portfolio" className="btn btn-secondary">
-            View Portfolio
+            View Projects
           </Link>
           <a 
             href="https://github.com/les1g" 
@@ -171,7 +171,7 @@ export default function ResumePage() {
             rel="noopener noreferrer"
             className="btn btn-github"
           >
-            GitHub Profile
+            GitHub
           </a>
         </div>
       </section>
