@@ -28,13 +28,12 @@ export default function PortfolioPage() {
       <div className="portfolio-header">
         <h1>My Projects</h1>
         <p className="portfolio-subtitle">
-          Explore my latest work in web development and design
+          Explore my latest work
         </p>
       </div>
 
       {/* Featured Live Projects */}
       <section className="featured-projects">
-        <h2>Featured Live Projects</h2>
         <PortfolioFilter projects={projects} />
       </section>
 
@@ -109,10 +108,11 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="portfolio-cta">
-        <h2>Want to see more?</h2>
-        <p>Check out my GitHub for additional projects and contributions</p>
+      <section className="about-section" style={{ textAlign: 'center' }}>
+        <h2>Let's Connect</h2>
+        <p style={{ marginBottom: 'var(--spacing-xl)' }}>
+          Interested in working together? I'd love to hear from you!
+        </p>
         <div style={{ 
           display: 'flex', 
           gap: 'var(--spacing-md)', 
@@ -120,7 +120,10 @@ export default function PortfolioPage() {
           flexWrap: 'wrap'
         }}>
           <Link href="/contact" className="btn btn-primary">
-            Get in Touch
+            Contact
+          </Link>
+          <Link href="/resume" className="btn btn-secondary">
+            View Resume
           </Link>
           <a 
             href="https://github.com/les1g" 
@@ -128,10 +131,11 @@ export default function PortfolioPage() {
             rel="noopener noreferrer"
             className="btn btn-github"
           >
-            View GitHub Profile
+            GitHub
           </a>
         </div>
       </section>
+
     </div>
   );
 }
