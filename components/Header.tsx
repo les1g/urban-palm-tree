@@ -13,7 +13,6 @@ export default function Header() {
 
   useEffect(() => {
     setMounted(true);
-    // Check for saved theme preference only after mounting
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = savedTheme === 'dark';
     setIsDark(prefersDark);
@@ -22,6 +21,10 @@ export default function Header() {
       document.body.classList.add('dark-theme');
     }
   }, []);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   const toggleTheme = () => {
     setIsDark(!isDark);
@@ -35,63 +38,61 @@ export default function Header() {
 
   const isActive = (path: string) => pathname === path;
 
-  // Don't render theme-dependent content until mounted
   if (!mounted) {
-    return (
-      <header>
-        <nav>
-          <button 
-            className="hamburger-menu"
-            onClick={toggleMenu}
-            aria-label="Toggle Navigation"
-          >
-            ☰
-          </button>
-
-          <div className={`nav-links ${isMenuOpen ? 'show-menu' : ''}`}>
-            <Link href="/" className={isActive('/') ? 'active' : ''}>Home</Link>
-            <Link href="/about" className={isActive('/about') ? 'active' : ''}>About</Link>
-            <Link href="/portfolio" className={isActive('/portfolio') ? 'active' : ''}>Projects</Link>
-            <Link href="/resume" className={isActive('/resume') ? 'active' : ''}>Resume</Link>
-            <Link href="/contact" className={isActive('/contact') ? 'active' : ''}>Contact</Link>
-            <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Dark Mode">
-              <svg className="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2" />
-                <path d="m12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              </svg>
-            </button>
-          </div>
-
-          <Link href="/">
-            <Image src="/cute-polar-bear.svg" alt="cute polar bear" width={120} height={120} className="cute-polar-bear" />
-          </Link>
-        </nav>
-      </header>
-    );
+    return null;
   }
 
   return (
     <header>
       <nav>
         <button 
-          className="hamburger-menu"
+          className={`hamburger-menu ${isMenuOpen ? 'active' : ''}`}
           onClick={toggleMenu}
           aria-label="Toggle Navigation"
+          type="button"
         >
-          ☰
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
 
         <div className={`nav-links ${isMenuOpen ? 'show-menu' : ''}`}>
-          <Link href="/" className={isActive('/') ? 'active' : ''}>Home</Link>
-          <Link href="/about" className={isActive('/about') ? 'active' : ''}>About</Link>
-          <Link href="/portfolio" className={isActive('/portfolio') ? 'active' : ''}>Projects</Link>
-          <Link href="/resume" className={isActive('/resume') ? 'active' : ''}>Resume</Link>
-          <Link href="/contact" className={isActive('/contact') ? 'active' : ''}>Contact</Link>
+          <Link 
+            href="/" 
+            className={isActive('/') ? 'active' : ''}
+          >
+            Home
+          </Link>
+          <Link 
+            href="/about" 
+            className={isActive('/about') ? 'active' : ''}
+          >
+            About
+          </Link>
+          <Link 
+            href="/portfolio" 
+            className={isActive('/portfolio') ? 'active' : ''}
+          >
+            Projects
+          </Link>
+          <Link 
+            href="/resume" 
+            className={isActive('/resume') ? 'active' : ''}
+          >
+            Resume
+          </Link>
+          <Link 
+            href="/contact" 
+            className={isActive('/contact') ? 'active' : ''}
+          >
+            Contact
+          </Link>
 
           <button 
             className="theme-toggle"
             onClick={toggleTheme}
             aria-label="Toggle Dark Mode"
+            type="button"
           >
             <svg 
               className="sun-icon" 
@@ -117,9 +118,7 @@ export default function Header() {
           </button>
         </div>
 
-        <Link href="/">
-          <Image src="/cute-polar-bear.svg" alt="cute polar bear" width={120} height={120} className="cute-polar-bear" />
-        </Link>
+        
       </nav>
     </header>
   );
