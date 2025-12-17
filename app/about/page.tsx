@@ -15,18 +15,21 @@ export default function AboutPage() {
         />
         <h1>Hi there!</h1>
         <p>
-          I began building websites two years before deciding to pursue my
-          current degree in software development at Western Governors University
-          (WGU).
+          My love for software started early when I got my first Nintendo DS, I
+          broke it more times than I’d like to admit, but in my defense I was
+          five years old. I found myself drawn not just to the games but to the
+          software behind the scenes that made them work.
         </p>
         <p>
-          I have worked in technical support positions at organizations such as
-          Hulu. I have a passion for user experience.
+          I did not always know this is what I wanted to do, then I became a
+          team lead for Hulu, and that is when I decided to focus more on
+          software development.
         </p>
         <p>
-          These days, I still care deeply about user experience, but I've also
-          developed a strong interest in backend technologies and the full
-          process of building well-designed software and websites.
+          More than anything, I enjoy connecting with others, sharing ideas, and
+          collaborating on projects that make technology accessible and useful.
+          If I can contribute software that helps people, that’s more than
+          enough to make me happy.
         </p>
       </section>
 
@@ -38,21 +41,24 @@ export default function AboutPage() {
         </p>
         <ul>
           <li>
-            <strong>HTML & CSS</strong> - Building responsive, accessible
-            layouts
+            <strong>Next.js & React</strong> – Developing scalable, modern web
+            applications with App Router and component-driven design
           </li>
           <li>
-            <strong>JavaScript</strong> - Adding interactivity and dynamic
-            features
+            <strong>TypeScript</strong> – Writing type-safe, maintainable code
+            for reliability and clarity
           </li>
           <li>
-            <strong>React & Next.js</strong> - Creating modern web applications
+            <strong>Tailwind CSS</strong> – Designing responsive, accessible
+            layouts with utility-first styling
           </li>
           <li>
-            <strong>Python & Flask</strong> - Backend development and APIs
+            <strong>Vercel</strong> – Deploying fast, serverless applications
+            with seamless CI/CD
           </li>
           <li>
-            <strong>Java</strong> - Object-oriented programming and applications
+            <strong>Python & Flask</strong> – Building APIs and lightweight
+            backend services
           </li>
         </ul>
         <p>
@@ -70,10 +76,14 @@ export default function AboutPage() {
           that I'm eager to explore.
         </p>
         <p>
-          When I'm not coding, I'm usually learning how to code better—through
-          online courses, documentation, or experimenting with new ideas. I
-          believe in continuous learning and staying curious about emerging
-          technologies.
+          When I'm not coding, I'm usually learning how to be a better
+          programmer or playing video games (I love Minecraft and Fortnite). I
+          love going on early morning hikes with my friends, exploring nature,
+          and capturing beautiful sunrises.
+        </p>
+        <p>
+          I believe that continuous learning and staying curious is what builds
+          great developers.
         </p>
       </section>
     </div>
