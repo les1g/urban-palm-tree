@@ -7,27 +7,31 @@ export default function CustomCursor() {
   const [isPointer, setIsPointer] = useState(false);
 
   useEffect(() => {
-    const updatePosition = (e: MouseEvent) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    const updateCursor = (e: MouseEvent) => {
+    const handleMouseOver = (e: Event) => {
       const target = e.target as HTMLElement;
-      setIsPointer(
-        window.getComputedStyle(target).cursor === 'pointer' ||
-        target.tagName === 'A' ||
-        target.tagName === 'BUTTON' ||
-        target.closest('a') !== null ||
-        target.closest('button') !== null
-      );
+      const isClickable = target.tagName === 'A' || 
+                          target.tagName === 'BUTTON' || 
+                          target.onclick !== null ||
+                          target.classList.contains('nav-links');
+      setIsPointer(isClickable);
     };
 
-    window.addEventListener('mousemove', updatePosition);
-    window.addEventListener('mouseover', updateCursor);
+    const handleMouseOut = () => {
+      setIsPointer(false);
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseover', handleMouseOver);
+    document.addEventListener('mouseout', handleMouseOut);
 
     return () => {
-      window.removeEventListener('mousemove', updatePosition);
-      window.removeEventListener('mouseover', updateCursor);
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseover', handleMouseOver);
+      document.removeEventListener('mouseout', handleMouseOut);
     };
   }, []);
 
@@ -72,4 +76,6 @@ export default function CustomCursor() {
       />
     </>
   );
+
+  
 }
