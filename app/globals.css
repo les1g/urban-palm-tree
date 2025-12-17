@@ -52,15 +52,15 @@ html {
 
 body {
   font-family: var(--font-primary);
-  background: 
+  background:
     linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%),
     linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px),
     linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px);
-  background-size: 
+  background-size:
     100% 100%,
     50px 50px,
     50px 50px;
-  background-position: 
+  background-position:
     0 0,
     0 0,
     0 0;
@@ -69,21 +69,32 @@ body {
   min-height: 100vh;
 }
 
-body > * {
+body>* {
   z-index: 1;
 }
 
 /* Custom cursor for interactive elements */
-a, button, input[type="submit"], .btn, .preview-card, .project-card, .contact-card, .theme-toggle, .hamburger-menu {
+a,
+button,
+input[type="submit"],
+.btn,
+.preview-card,
+.project-card,
+.contact-card,
+.theme-toggle,
+.hamburger-menu {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%236366f1" stroke="%236366f1" stroke-width="2"><circle cx="12" cy="12" r="6"/></svg>') 12 12, pointer !important;
 }
 
 /* Animated cursor trail effect */
 @keyframes cursorGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.5;
     transform: scale(1);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.2);
@@ -91,13 +102,15 @@ a, button, input[type="submit"], .btn, .preview-card, .project-card, .contact-ca
 }
 
 a {
-  color: var(--primary-color);        /* normal link color */
+  color: var(--primary-color);
+  /* normal link color */
   text-decoration: underline;
 }
 
 a:hover,
 a:focus {
-  color: var(--secondary-color);       /* hover/focus color */
+  color: var(--secondary-color);
+  /* hover/focus color */
 }
 
 nav {
@@ -328,7 +341,7 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  
+
 }
 
 .preview-grid {
@@ -600,6 +613,7 @@ footer a {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -611,6 +625,7 @@ footer a {
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -621,6 +636,7 @@ footer a {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -743,7 +759,7 @@ footer a {
   .dark-theme .nav-links {
     background: rgba(26, 32, 44, 0.99);
   }
-  
+
   .nav-links a {
     font-size: 1.8rem;
     padding: 1.5rem 2rem;
@@ -768,7 +784,7 @@ footer a {
     transform: translateX(10px);
   }
 
- 
+
   .nav-links a.active {
     background: rgba(99, 102, 241, 0.5);
     border-color: rgba(99, 102, 241, 0.8);
@@ -883,7 +899,7 @@ footer a {
 .portfolio-header h1 {
   font-size: 3.5rem;
   margin-bottom: var(--spacing-md);
-  background: linear-gradient(135deg, var(--text-primary), var(--primary-color));
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
