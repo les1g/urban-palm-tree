@@ -1,25 +1,47 @@
-import PortfolioFilter from '../../components/PortfolioFilter';
-import Link from 'next/link';
+import PortfolioFilter from "../../components/PortfolioFilter";
+import Link from "next/link";
 
 export default function PortfolioPage() {
   const projects = [
     {
+      title: "Calculator",
+      description:
+        "A Python calculator built with Flask. I focused on clean routing, templating, and backend logic.",
+      techStack: ["Python", "Flask"],
+      liveLink: "https://calcles1g.pythonanywhere.com/",
+      githubLink: "https://github.com/les1g/Calculator",
+      category: "backend",
+      status: "complete" as const,
+    },
+    {
+      title: "GG Tax Services",
+      description:
+        "A business website built with Next.js and Tailwind CSS. It includes secure client login, document upload, and payment integration.",
+      techStack: ["Next.js", "React", "TypeScript"],
+      liveLink: "https://gg-tax.vercel.app/",
+      githubLink: "https://github.com/les1g/GG-Tax",
+      category: "fullstack",
+      status: "complete" as const,
+    },
+    {
       title: "Minnie's Portfolio",
-      description: "Clean, modern portfolio design where I really focused on user experience and responsive layouts. This was where I started getting serious about CSS animations.",
-      techStack: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      description:
+        "Another school project. I focused on clean, modern portfolio design and user experience with responsive layouts.",
+      techStack: ["HTML", "CSS", "JavaScript"],
       liveLink: "https://les1g.github.io/minnies-portfolio/",
       githubLink: "https://github.com/les1g/minnies-portfolio",
       category: "frontend",
-      status: "complete" as const
+      status: "complete" as const,
     },
     {
       title: "Welcome to Arizona",
-      description: "Interactive travel guide that was honestly just fun to build. Got to play around with smooth animations and really think about how users interact with content.",
-      techStack: ["HTML5", "CSS3", "JavaScript", "Animations"],
+      description:
+        "This was one of my first projects for school. It helped me understand the structure of HTML and how to transform raw information into a meaningful, user-friendly interface.",
+      techStack: ["HTML", "CSS", "JavaScript"],
       liveLink: "https://les1g.github.io/welcomeToArizona/",
       githubLink: "https://github.com/les1g/welcomeToArizona",
       category: "frontend",
-      status: "complete" as const
+      status: "complete" as const,
     },
   ];
 
@@ -27,9 +49,7 @@ export default function PortfolioPage() {
     <div className="portfolio-container">
       <div className="portfolio-header">
         <h1>My Projects</h1>
-        <p className="portfolio-subtitle">
-          Explore my latest work
-        </p>
+        <p className="portfolio-subtitle">Explore my latest work</p>
       </div>
 
       {/* Featured Live Projects */}
@@ -43,18 +63,25 @@ export default function PortfolioPage() {
         <div className="project-list">
           <div className="project-item">
             <div className="project-info">
-              <h3>Personal Portfolio Website (This Site)</h3>
+              <h3>Personal Website (This Site)</h3>
               <p>
-                Full-stack Next.js app that's become my playground for trying out new
-                ideas. Features dark mode, animations, project filtering, and
-                probably some bugs I'm still hunting down.
+                My very own realm on the internet! It was originally a simple
+                mix of JavaScript, HTML, and CSS. I have now rebuilt using a
+                modern stack with Next.js and TypeScript.
               </p>
               <div className="tech-stack">
                 <span className="tech-tag">Next.js</span>
                 <span className="tech-tag">React</span>
                 <span className="tech-tag">TypeScript</span>
-                <span className="tech-tag">CSS3</span>
               </div>
+              <a
+                href="https://github.com/les1g/urban-palm-tree"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                View on GitHub →
+              </a>
             </div>
             <div className="project-status">
               <span className="status-badge active">Live</span>
@@ -65,8 +92,8 @@ export default function PortfolioPage() {
             <div className="project-info">
               <h3>Python Labs Collection</h3>
               <p>
-                Collection of Python exercises where I work through algorithms and
-                data structures. It's where I go when I want to sharpen my
+                Collection of Python exercises where I work through algorithms
+                and data structures. It's where I go when I want to sharpen my
                 problem-solving skills.
               </p>
               <div className="tech-stack">
@@ -92,8 +119,9 @@ export default function PortfolioPage() {
             <div className="project-info">
               <h3>HTML/CSS Labs</h3>
               <p>
-                Frontend exercises where I experiment with new CSS techniques and
-                responsive design patterns. Always something new to try here.
+                Frontend exercises where I experiment with new CSS techniques
+                and responsive design patterns. Always something new to try
+                here.
               </p>
               <div className="tech-stack">
                 <span className="tech-tag">HTML5</span>
@@ -108,26 +136,28 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section className="about-section" style={{ textAlign: 'center' }}>
+      <section className="about-section" style={{ textAlign: "center" }}>
         <h2>Let's Connect</h2>
-        <p style={{ marginBottom: 'var(--spacing-xl)' }}>
+        <p style={{ marginBottom: "var(--spacing-xl)" }}>
           Interested in working together? I'd love to hear from you!
         </p>
-        <div style={{ 
-          display: 'flex', 
-          gap: 'var(--spacing-md)', 
-          justifyContent: 'center',
-          flexWrap: 'wrap'
-        }}>
+        <div
+          style={{
+            display: "flex",
+            gap: "var(--spacing-md)",
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}
+        >
           <Link href="/contact" className="btn btn-primary">
             Contact
           </Link>
           <Link href="/resume" className="btn btn-secondary">
             View Resume
           </Link>
-          <a 
-            href="https://github.com/les1g" 
-            target="_blank" 
+          <a
+            href="https://github.com/les1g"
+            target="_blank"
             rel="noopener noreferrer"
             className="btn btn-github"
           >
@@ -135,7 +165,6 @@ export default function PortfolioPage() {
           </a>
         </div>
       </section>
-
     </div>
   );
 }
