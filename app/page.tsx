@@ -11,9 +11,10 @@ export default function Home() {
               <a href="/about">Gisel Garrido</a>
             </h1>
             <p className="hero-description">
-              I am a Student pursuing my B.S. in Software Engineering. I am
-              usually focused on school and use my spare time to work on
-              personal projects.
+              I am pursuing a B.S. in Software Engineering from @
+              <a href="https://www.wgu.edu/">wgu</a>. I expect to finish May
+              2027. I am usually focused on school and use my spare time to work
+              on personal projects.
             </p>
             <div className="hero-buttons">
               <Link href="/portfolio" className="btn btn-primary">
@@ -79,13 +80,10 @@ export default function Home() {
                 />
               </svg>
             </div>
-            <h3>Portfolio Website</h3>
-            <p>
-              A clean, modern design with a fun twist. I focused on user
-              experience and responsive layouts. The possibilities are endless!
-            </p>
+            <h3>Web App</h3>
+            <p>A business website built with Next.js.</p>
             <a
-              href="https://les1g.github.io/minnies-portfolio/"
+              href="https://gg-tax.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="preview-link"
@@ -116,12 +114,10 @@ export default function Home() {
                 />
               </svg>
             </div>
-            <h3>Welcome to Arizona</h3>
-            <p>
-              Simple design with focus on website layout and HTML structure.
-            </p>
+            <h3>Calculator</h3>
+            <p>A Python calculator built using Flask</p>
             <a
-              href="https://les1g.github.io/welcomeToArizona/"
+              href="https://calcles1g.pythonanywhere.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="preview-link"
@@ -142,7 +138,7 @@ export default function Home() {
               </svg>
             </div>
             <h3>More Projects</h3>
-            <p>Explore my complete portfolio and GitHub repositories</p>
+            <p>Explore my portfolio and GitHub repositories.</p>
             <Link href="/portfolio" className="preview-link">
               See All →
             </Link>
