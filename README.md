@@ -22,10 +22,8 @@
     <a href="https://github.com/les1g/urban-palm-tree"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    &middot;
-    <a href="https://github.com/les1g/urban-palm-tree/issues/new">Report Bug</a>
-    &middot;
+    <a href="https://les1g.vercel.app/">View Demo</a> •
+    <a href="https://github.com/les1g/urban-palm-tree/issues/new">Report Bug</a> •
     <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
@@ -84,7 +82,7 @@ My site features the following:
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+The site is live on: https://les1g.vercel.app/. Alternatively, you can get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
