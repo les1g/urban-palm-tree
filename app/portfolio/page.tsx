@@ -6,22 +6,22 @@ export default function PortfolioPage() {
     {
       title: "Calculator",
       description:
-        "A Python calculator built with Flask. I focused on clean routing, templating, and backend logic.",
+        "A Python web app built with Flask. I focused on clean routing, templating, and backend logic.",
       techStack: ["Python", "Flask"],
       liveLink: "https://calcles1g.pythonanywhere.com/",
       githubLink: "https://github.com/les1g/Calculator",
       category: "backend",
-      status: "complete" as const,
+      status: "active" as const,
     },
     {
-      title: "GG Tax Services",
+      title: "Tax Services",
       description:
-        "A business website built with Next.js and Tailwind CSS. It includes secure client login, document upload, and payment integration.",
+        "A tax business website built with Next.js and Tailwind CSS. It includes secure client login, document upload, and payment integration.",
       techStack: ["Next.js", "React", "TypeScript"],
       liveLink: "https://gg-tax.vercel.app/",
       githubLink: "https://github.com/les1g/GG-Tax",
       category: "fullstack",
-      status: "complete" as const,
+      status: "active" as const,
     },
     {
       title: "Minnie's Portfolio",
@@ -31,7 +31,7 @@ export default function PortfolioPage() {
       liveLink: "https://les1g.github.io/minnies-portfolio/",
       githubLink: "https://github.com/les1g/minnies-portfolio",
       category: "frontend",
-      status: "complete" as const,
+      status: "active" as const,
     },
     {
       title: "Welcome to Arizona",
@@ -41,7 +41,46 @@ export default function PortfolioPage() {
       liveLink: "https://les1g.github.io/welcomeToArizona/",
       githubLink: "https://github.com/les1g/welcomeToArizona",
       category: "frontend",
+      status: "active" as const,
+    },
+    {
+      title: "Personal Website (This Site)",
+      description:
+        "My very own realm on the internet! It was originally a simple mix of JavaScript, HTML, and CSS. I have now rebuilt it using a modern stack with Next.js and TypeScript.",
+      techStack: ["Next.js", "React", "TypeScript"],
+      githubLink: "https://github.com/les1g/urban-palm-tree",
+      category: "fullstack",
+      status: "active" as const,
+    },
+    {
+      title: "Calculator App",
+      description:
+        "A simple Python calculator with a Tkinter GUI. It runs locally on your machine and demonstrates how core calculation logic can be connected to a desktop interface. Includes unit tests with Pytest for reliability.",
+      techStack: ["Python", "Tkinter", "Pytest"],
+      githubLink: "https://github.com/les1g/Calculator-App",
+      liveLink: "",
+      category: "desktop",
       status: "complete" as const,
+    },
+    {
+      title: "Sudoku App",
+      description:
+        "A simple Sudoku solver and generator with a Tkinter GUI. It runs locally on your machine. The application allows users to generate random Sudoku puzzles, solve them, and interactively fill in the grid.",
+      techStack: ["Python", "Tkinter", "NumPy", "Dokusan"],
+      githubLink: "https://github.com/les1g/Sudoku-App",
+      liveLink: "",
+      category: "desktop",
+      status: "complete" as const,
+    },
+    {
+      title: "Python Labs Collection",
+      description:
+        "Collection of Python exercises where I work through algorithms and data structures.",
+      techStack: ["Python", "Algorithms", "Problem Solving"],
+      githubLink: "https://github.com/les1g/python_labs",
+      liveLink: "",
+      category: "backend",
+      status: "in-progress" as const,
     },
   ];
 
@@ -57,85 +96,7 @@ export default function PortfolioPage() {
         <PortfolioFilter projects={projects} />
       </section>
 
-      {/* Development Projects */}
-      <section className="other-projects">
-        <h2>Development Projects</h2>
-        <div className="project-list">
-          <div className="project-item">
-            <div className="project-info">
-              <h3>Personal Website (This Site)</h3>
-              <p>
-                My very own realm on the internet! It was originally a simple
-                mix of JavaScript, HTML, and CSS. I have now rebuilt using a
-                modern stack with Next.js and TypeScript.
-              </p>
-              <div className="tech-stack">
-                <span className="tech-tag">Next.js</span>
-                <span className="tech-tag">React</span>
-                <span className="tech-tag">TypeScript</span>
-              </div>
-              <a
-                href="https://github.com/les1g/urban-palm-tree"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-              >
-                View on GitHub →
-              </a>
-            </div>
-            <div className="project-status">
-              <span className="status-badge active">Live</span>
-            </div>
-          </div>
-
-          <div className="project-item">
-            <div className="project-info">
-              <h3>Python Labs Collection</h3>
-              <p>
-                Collection of Python exercises where I work through algorithms
-                and data structures. It's where I go when I want to sharpen my
-                problem-solving skills.
-              </p>
-              <div className="tech-stack">
-                <span className="tech-tag">Python</span>
-                <span className="tech-tag">Algorithms</span>
-                <span className="tech-tag">Problem Solving</span>
-              </div>
-              <a
-                href="https://github.com/les1g/python_labs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-              >
-                View on GitHub →
-              </a>
-            </div>
-            <div className="project-status">
-              <span className="status-badge complete">Complete</span>
-            </div>
-          </div>
-
-          <div className="project-item">
-            <div className="project-info">
-              <h3>HTML/CSS Labs</h3>
-              <p>
-                Frontend exercises where I experiment with new CSS techniques
-                and responsive design patterns. Always something new to try
-                here.
-              </p>
-              <div className="tech-stack">
-                <span className="tech-tag">HTML5</span>
-                <span className="tech-tag">CSS3</span>
-                <span className="tech-tag">Responsive Design</span>
-              </div>
-            </div>
-            <div className="project-status">
-              <span className="status-badge in-progress">In Progress</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* Contact Section */}
       <section className="about-section" style={{ textAlign: "center" }}>
         <h2>Let's Connect</h2>
         <p style={{ marginBottom: "var(--spacing-xl)" }}>
